@@ -110,7 +110,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="tel:+971501234567"
+                  href="tel:+971555566375"
                   className="flex items-center gap-4 group"
                   data-testid="link-phone"
                 >
@@ -119,7 +119,7 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Phone</div>
-                    <div className="text-foreground font-medium" data-testid="text-phone">+971 50 123 4567</div>
+                    <div className="text-foreground font-medium" data-testid="text-phone">+971 55 556 6375</div>
                   </div>
                 </a>
 

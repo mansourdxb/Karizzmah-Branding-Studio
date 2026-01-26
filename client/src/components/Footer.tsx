@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logoImage from "@assets/image_1769447365349.png";
 
 const footerLinks = {
   services: [
@@ -15,7 +16,7 @@ const footerLinks = {
   ],
   contact: [
     { label: "info@karizzmah.ae", href: "mailto:info@karizzmah.ae" },
-    { label: "+971 50 123 4567", href: "tel:+971501234567" },
+    { label: "+971 55 556 6375", href: "tel:+971555566375" },
     { label: "Dubai, UAE", href: "#" },
   ],
 };
@@ -40,9 +41,8 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <a href="#home" className="text-2xl font-bold tracking-tight inline-block mb-4" data-testid="link-footer-logo">
-              <span className="text-primary">KARIZZ</span>
-              <span className="text-foreground">MAH</span>
+            <a href="#home" className="inline-block mb-4" data-testid="link-footer-logo">
+              <img src={logoImage} alt="Karizzmah" className="h-14 w-auto" />
             </a>
             <p className="text-muted-foreground mb-6" data-testid="text-footer-description">
               Premier advertising and branding agency in Dubai. We create unforgettable

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImage from "@assets/image_1769447365349.png";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -53,12 +54,11 @@ export function Navigation() {
                 e.preventDefault();
                 scrollToSection("#home");
               }}
-              className="text-2xl font-bold tracking-tight"
+              className="flex items-center"
               whileHover={{ scale: 1.02 }}
               data-testid="link-logo"
             >
-              <span className="text-primary">KARIZZ</span>
-              <span className="text-foreground">MAH</span>
+              <img src={logoImage} alt="Karizzmah" className="h-14 w-auto" />
             </motion.a>
 
             <div className="hidden md:flex items-center gap-8">
