@@ -3,11 +3,8 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
-const repoName = "Karizzmah-Branding-Studio";
-
 export default defineConfig({
-  // ✅ REQUIRED for GitHub Pages project sites:
-  // https://<user>.github.io/<repoName>/
+  // ✅ For custom domain (www.karizzmah.ae)
   base: "/",
 
   plugins: [
@@ -33,11 +30,8 @@ export default defineConfig({
     },
   },
 
-  // Replit dev uses /client as root
   root: path.resolve(import.meta.dirname, "client"),
 
-  // ✅ IMPORTANT: For GitHub Pages you must publish static build output.
-  // Option 1 (recommended): output to /docs and set GitHub Pages to main /docs
   build: {
     outDir: path.resolve(import.meta.dirname, "docs"),
     emptyOutDir: true,
