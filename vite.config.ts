@@ -8,7 +8,7 @@ const repoName = "Karizzmah-Branding-Studio";
 export default defineConfig({
   // ✅ REQUIRED for GitHub Pages project sites:
   // https://<user>.github.io/<repoName>/
-  base: `/${repoName}/`,
+  base: "/",
 
   plugins: [
     react(),
