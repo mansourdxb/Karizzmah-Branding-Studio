@@ -12,6 +12,7 @@ declare module "http" {
   }
 }
 
+
 app.use(
   express.json({
     verify: (req, _res, buf) => {
@@ -19,6 +20,8 @@ app.use(
     },
   }),
 );
+
+
 
 app.use(express.urlencoded({ extended: false }));
 
@@ -32,6 +35,7 @@ export function log(message: string, source = "express") {
 
   console.log(`${formattedTime} [${source}] ${message}`);
 }
+
 
 app.use((req, res, next) => {
   const start = Date.now();
