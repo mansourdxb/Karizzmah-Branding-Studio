@@ -48,19 +48,19 @@ export function Navigation() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-[#242424] ${
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-black ${
           isScrolled ? "shadow-lg shadow-black/30" : ""
         }`}
       >
         <div className="w-full px-3 sm:px-5 lg:pl-4 lg:pr-14 xl:pl-6 xl:pr-20">
           <div className="flex items-end h-20 pb-2 lg:pb-2.5">
-            <Link href="/" className="flex items-end shrink-0 ml-3 lg:ml-8 translate-y-1 lg:translate-y-1.5">
-              <img src={logoImage} alt={siteConfig.name} className="h-12 sm:h-14 lg:h-[4.75rem] w-auto object-contain" />
+            <Link href="/" className="flex items-end shrink-0 ml-3 lg:ml-8 translate-y-2.5 lg:translate-y-3.5">
+              <img src={logoImage} alt={siteConfig.name} className="h-14 sm:h-16 lg:h-[5.5rem] w-auto object-contain" />
             </Link>
 
             <div className="hidden lg:flex items-center gap-3 ml-auto lg:mr-16 xl:mr-24">
               <nav className="flex items-center gap-1 lg:mr-6">
-              {navLinks.map((link) =>
+              {navLinks.filter((link) => !link.hidden).map((link) =>
                 link.label === "Services" ? (
                   <div
                     key={link.href}
@@ -80,7 +80,7 @@ export function Navigation() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 w-72 bg-[#2d2d2d] shadow-xl border border-white/10 rounded-md py-2 z-50"
+                          className="absolute top-full left-0 w-72 bg-black shadow-xl border border-white/10 rounded-md py-2 z-50"
                         >
                           {services.map((service) => (
                             <ServiceLink
@@ -124,9 +124,9 @@ export function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#242424] pt-24 px-6 pb-8 lg:hidden overflow-y-auto overscroll-contain"
+            className="fixed inset-0 z-40 bg-black pt-24 px-6 pb-8 lg:hidden overflow-y-auto overscroll-contain"
           >
-            <nav className="flex flex-col gap-2">              {navLinks.map((link) =>
+            <nav className="flex flex-col gap-2">              {navLinks.filter((link) => !link.hidden).map((link) =>
                 link.label === "Services" ? (
                   <div key={link.href}>
                     <div className="flex items-center border-b border-white/10">

@@ -1,4 +1,4 @@
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import {
   Instagram,
   MapPin,
@@ -21,9 +21,6 @@ function FooterLinkIcon() {
 }
 
 export function Footer() {
-  const [location] = useLocation();
-  const isContactPage = location === "/contact";
-
   return (
     <footer className="bg-[#151515] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
@@ -37,8 +34,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-white/80 text-sm leading-relaxed">
-              {siteConfig.fullName} is the best Advertising and Digital Marketing Company in
-              Dubai, UAE. We offer a broad range of advertising and marketing solutions that
+              {siteConfig.fullName} is one of the premier trading & advertising agency in UAE. We offer a broad range of advertising and marketing solutions that
               are specifically suited for various sectors. We excel in Branding, Creative
               Designing, Video Production, and Digital Marketing — your trusted signage and
               advertising partner in Dubai, UAE.
@@ -65,7 +61,7 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-bold text-white mb-5">Company</h4>
             <ul className="space-y-3">
-              {navLinks.filter((l) => l.label !== "Home").map((link) => (
+              {navLinks.filter((l) => l.label !== "Home" && !l.hidden).map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -141,25 +137,23 @@ export function Footer() {
         </div>
       </div>
 
-      {isContactPage && (
-        <div className="border-t border-white/5 bg-black/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <p className="text-xs sm:text-sm text-white/30 leading-relaxed">
-              <a
-                href={siteConfig.developerCredit.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-[#4A7FD4]/60 hover:text-[#4A7FD4]/90 hover:underline transition-colors"
-              >
-                {siteConfig.developerCredit.name}
-              </a>
-              {" "}
-              © {new Date().getFullYear()}{" "}
-              {siteConfig.developerCredit.label}
-            </p>
-          </div>
+      <div className="border-t border-white/5 bg-black/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-center">
+          <p className="text-xs sm:text-sm text-white/30 leading-relaxed">
+            <a
+              href={siteConfig.developerCredit.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#4A7FD4]/60 hover:text-[#4A7FD4]/90 hover:underline transition-colors"
+            >
+              {siteConfig.developerCredit.name}
+            </a>
+            {" "}
+            © {new Date().getFullYear()}{" "}
+            {siteConfig.developerCredit.label}
+          </p>
         </div>
-      )}
+      </div>
     </footer>
   );
 }

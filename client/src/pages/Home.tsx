@@ -2,6 +2,7 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Hero } from "@/components/sections/Hero";
 import { AboutPreview } from "@/components/sections/AboutPreview";
 import { Stats } from "@/components/sections/Stats";
+import { TrophiesAcrylic } from "@/components/sections/TrophiesAcrylic";
 import { Services } from "@/components/sections/Services";
 import { WhyChoose } from "@/components/sections/WhyChoose";
 import { CtaBanner } from "@/components/sections/CtaBanner";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <AboutPreview />
       <Stats />
+      <TrophiesAcrylic />
       <Services />
       <WhyChoose />
       <CtaBanner />

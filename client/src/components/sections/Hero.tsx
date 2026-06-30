@@ -10,13 +10,16 @@ export function Hero() {
     <>
       <section className="relative overflow-hidden bg-black lg:min-h-[calc(100vh-5rem)]">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroSkyline})` }}
+          className="absolute inset-0 bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: `url(${heroSkyline})`,
+            backgroundPosition: "center bottom",
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/15 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-black/35 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
 
         <div className="relative z-10 lg:min-h-[calc(100vh-5rem)] flex flex-col lg:flex-row lg:items-stretch">
-          {/* Logo — left of card on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,7 +33,6 @@ export function Hero() {
             />
           </motion.div>
 
-          {/* Welcome card — smaller, right edge */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -40,31 +42,31 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-sm bg-black/25 backdrop-blur-xl backdrop-saturate-150 border border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)] pt-10 pb-8 px-5 sm:pt-20 sm:pb-14 sm:pl-12 sm:pr-11 lg:pt-28 lg:pb-12 lg:pl-16 lg:pr-14">
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.06] via-transparent to-black/20" />
               <div className="relative z-10">
-              <p className="type-label mb-4 sm:mb-6">Welcome to</p>
+                <p className="type-label mb-4 sm:mb-6">Welcome to</p>
 
-              <h2 className="type-title text-white mb-4 sm:mb-6">
-                {siteConfig.name}
-                <br />
-                Advertising &amp; Trading
-              </h2>
+                <h2 className="type-title text-white mb-4 sm:mb-6">
+                  {siteConfig.name}
+                  <br />
+                  {siteConfig.businessLine}
+                </h2>
 
-              <h1 className="text-sm sm:text-base md:text-lg font-semibold text-primary mb-5 sm:mb-7">
-                {siteConfig.tagline}
-              </h1>
+                <h1 className="text-sm sm:text-base md:text-lg font-semibold text-primary mb-5 sm:mb-7">
+                  {siteConfig.tagline}
+                </h1>
 
-              {siteConfig.heroParagraphs.map((paragraph) => (
-                <p key={paragraph} className="type-body text-white/75 mb-4 last:mb-6 sm:last:mb-8">
-                  {paragraph}
-                </p>
-              ))}
+                {siteConfig.heroParagraphs.map((paragraph) => (
+                  <p key={paragraph} className="type-body text-white/75 mb-4 last:mb-6 sm:last:mb-8">
+                    {paragraph}
+                  </p>
+                ))}
 
-              <Link
-                href="/services"
-                className="type-btn gap-3 bg-primary text-black px-6 sm:px-9 py-3.5 sm:py-4 hover:brightness-110 transition-all shadow-md w-full sm:w-auto"
-              >
-                Our Services
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                <Link
+                  href="/services"
+                  className="type-btn gap-3 bg-primary text-black px-6 sm:px-9 py-3.5 sm:py-4 hover:brightness-110 transition-all shadow-md w-full sm:w-auto"
+                >
+                  Our Services
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -74,8 +76,7 @@ export function Hero() {
       <section className="bg-[#393A3B] py-7 lg:py-8">
         <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="type-body text-white/85">
-            As the Best Advertising and Digital Marketing Company in Dubai, the
-            success of Karizzmah is intertwined with the achievements of our clients.
+            {siteConfig.heroBandText}
           </p>
         </div>
       </section>

@@ -22,7 +22,7 @@ export function HeroWelcome() {
               <h2 className="type-title text-[#1b1b1b] mb-5">
                 {siteConfig.name}
                 <br />
-                Advertising &amp; Trading
+                {siteConfig.businessLine}
               </h2>
 
               <h1 className="type-description font-semibold text-[#1b1b1b] mb-6">
@@ -69,8 +69,7 @@ export function HeroWelcome() {
       <section className="bg-[#f7f7f7] border-y border-[#ececec] py-7 lg:py-8">
         <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="type-body text-[#666666]">
-            As the Best Advertising and Digital Marketing Company in Dubai, the
-            success of Karizzmah is intertwined with the achievements of our clients.
+            {siteConfig.heroBandText}
           </p>
         </div>
       </section>
