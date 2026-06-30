@@ -1,8 +1,8 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import heroSkyline from "@assets/images/hero-skyline-night.png";
-import heroBrandCenter from "@assets/images/hero-brand-center.png";
+import heroSkyline from "@assets/images/hero-skyline.png";
+import heroBrandCenter from "@assets/images/hero-skyline-night.png";
 import { siteConfig } from "@/data/site";
 
 export function Hero() {

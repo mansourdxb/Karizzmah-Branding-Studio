@@ -5,6 +5,8 @@ import {
   Mail,
   Phone,
   Globe,
+  Linkedin,
+  Facebook,
 } from "lucide-react";
 import footerLogo from "@assets/images/footer-logo.png";
 import { siteConfig, navLinks } from "@/data/site";
@@ -125,6 +127,24 @@ export function Footer() {
                 aria-label="TikTok"
               >
                 <FaTiktok className="w-4 h-4" />
+              </a>
+              <a
+                href={siteConfig.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 rounded-full bg-[#2a2a2a] flex items-center justify-center hover:bg-primary hover:text-black transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href={siteConfig.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 rounded-full bg-[#2a2a2a] flex items-center justify-center hover:bg-primary hover:text-black transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4" />
               </a>
             </div>
           </div>

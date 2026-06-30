@@ -65,6 +65,10 @@ export const siteConfig = {
 
     tiktok: "https://www.tiktok.com/@karrizmah0?_r=1&_t=ZS-97OZfH9PlC8",
 
+    linkedin: "https://www.linkedin.com/company/karizzmah/",
+
+    facebook: "https://www.facebook.com/people/Karizzmahae/61591027906841",
+
   },
 
   developerCredit: {

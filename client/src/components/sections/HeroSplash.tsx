@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroSkyline from "@assets/images/hero-skyline-night.png";
+import heroSkyline from "@assets/images/hero-skyline.png";
 import heroBrandCenter from "@assets/images/hero-brand-center.png";
 import { siteConfig } from "@/data/site";
 
